@@ -9,7 +9,7 @@ termux: https://github.com/termux/termux-app
 termux-x11: https://github.com/termux/termux-x11
 
 
-'''
+```
 #setup command
 apt update && apt install -y tmux xdotool x11-repo termux-x11-nightly
-'''
+```
