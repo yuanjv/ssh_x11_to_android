@@ -31,4 +31,5 @@ tmux send-keys -t $app:0.1 "flatpak run --socket=x11 --share=network --device=dr
 #make sure x window always max
 tmux split-window -v -t $app:0.0
 tmux send-keys -t $app:0.1 'export DISPLAY=:0' ENTER
+#this include all pop-ups may need a fix
 tmux send-keys -t $app:0.1 "while true; do xdotool search $app | xargs -I {} xdotool windowsize {} 100% 100% && xdotool search $app | xargs -I {} xdotool windowmove {} 0 0; sleep 1; done 2>/dev/null" ENTER
