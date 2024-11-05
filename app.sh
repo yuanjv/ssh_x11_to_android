@@ -64,4 +64,7 @@ keep_max &
 # Launch APP via SSH
 echo "Launching APP..."
 ssh -Y "$REMOTE_ADDR" "$APP_RUN_CMD" &
-wait
+SSH_PID=$!
+
+# Wait for SSH to complete
+wait $SSH_PID
