@@ -5,12 +5,14 @@ REMOTE_ADDR='user@ip'
 APP_CLASS=''
 # Do this if you want run a flatpak app: flatpak run --socket=x11 --share=network [flatpak_id]
 APP_RUN_CMD=''
+APP_KILL_CMD=''
 WINDOW_TITLE_PATTERN=''  # Pattern to identify the APP window
 X11_DISPLAY=':0'
 
 # Cleanup function to kill all child processes when the script exits
 cleanup() {
     echo "Cleaning up processes..."
+    ssh "$REMOTE_ADDR" "$APP_KILL_CMD"
     pkill -P $$
 }
 
