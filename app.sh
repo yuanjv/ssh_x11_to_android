@@ -17,7 +17,7 @@ cleanup() {
 }
 
 # Set up cleanup trap
-trap cleanup EXIT
+trap cleanup EXIT INT TERM
 
 # Function to find the main window ID
 find_main_window() {
