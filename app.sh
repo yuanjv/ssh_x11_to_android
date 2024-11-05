@@ -3,8 +3,7 @@
 # Configuration
 REMOTE_ADDR='user@ip'
 APP_CLASS=''
-# Do this if you want run a flatpak app: flatpak run --socket=x11 --share=network [flatpak_id]
-APP_RUN_CMD=''
+APP_RUN_CMD='' # Do this if you want run a flatpak app: flatpak run --socket=x11 --share=network [flatpak_id]
 APP_KILL_CMD=''
 WINDOW_TITLE_PATTERN=''  # Pattern to identify the APP window
 X11_DISPLAY=':0'
