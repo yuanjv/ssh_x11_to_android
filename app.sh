@@ -63,4 +63,5 @@ keep_max &
 
 # Launch APP via SSH
 echo "Launching APP..."
-ssh -Y "$REMOTE_ADDR" "$APP_RUN_CMD"
+ssh -Y "$REMOTE_ADDR" "$APP_RUN_CMD" &
+wait
